@@ -1,0 +1,45 @@
+express.js => web framework for node.js 
+We use express to write and build backend logic
+
+
+
+{ 
+Fullstack :
+Frontend           
+J kura website ma dekhincha tyo frontend ho - UI/UX part
+
+Backend 
+J kura dekhideina jun cai website brain jasto ho - Logic part
+
+
+Fullstack website
+We have frontend backend and database in Fullstack
+
+Frontend sends (req) to backend => Backend validates , checks logic and gives (res)
+(req) => request
+(res) => response
+}
+
+
+#BACKEND : Logic handle, database connection , database query run, webapp logic build part
+In MERN stack we use express.js as backend tool
+
+// express package should be installed 
+npm i express => hamro package.json ma express bhanney package install garcha
+
+// STEPS FOR BACKEND SETUP
+1st step: Create a folder named backend or server
+2nd step: We should go inside backend dir / `cd backend`
+3rd step: package initialize `npm init`
+4th step: Install express `npm i express`
+5th step: Create a file named index.js in backend dir
+6th step: We will work in ES Module - import , export so, we have to go inside package.json and update "type":"commonjs" to  "type":"module"
+7th step (Server Setup) : We will create a variable app and give it express functionality
+`const app = express()` // Do not forget to import express
+8th step: Run express file in specific port, 
+`
+const PORT = 5000 //PORT bhanney variable lai 5000 assign garey
+
+app.listen(PORT, () => { // 5000 port number aaucha ani backend le tellai listen garera 5000 port ma run garcha
+    console.log(`App is runing on port: ${PORT}`) // PORT aayo bhani rw backend le PORT listen garyo bhani console ma message print gardencha
+} )
