@@ -97,7 +97,7 @@ export const loginUserController = async (req, res) => {
         message: "invalid credential"
       });
     }
-    const token = generateToken({
+    const token = await generateToken({
       payload: {
         id:isValidemail.id,
        },
@@ -106,7 +106,8 @@ export const loginUserController = async (req, res) => {
 
     res.status(200).json({
        message: "Login Successful", 
-       data: isValidemail });
+       data: isValidemail,
+      token:token });
   } catch (error) {
     res.status(500).json({ 
       message: "Internal Server Error", 
@@ -151,7 +152,7 @@ export const loginUserController = async (req, res) => {
  }
 export const resetPassword = async(req,res) => {
   try {
-    const token = req.query.token;// ?token=
+    const token = req.query.token;  //?token=
     const verifiedToken = await verifyToken(token);
     console.log(verifiedToken);
 
@@ -184,3 +185,24 @@ export const resetPassword = async(req,res) => {
   
   }
 }
+
+
+export const updateUser = async (req, res) => {
+   try {
+     const data = req.body;
+     delete data.password;
+
+     const id = req.userId;
+   
+
+     const result = await User.findByIdAndUpdate(id, data, { new: true });
+     res.status(200).json({ 
+       message: "User updated successfully",
+        data: result });
+   } catch (error) {
+     res.status(500).json({
+        message: "Internal Server Error", 
+        error: error.message });
+   }
+ };
+ 

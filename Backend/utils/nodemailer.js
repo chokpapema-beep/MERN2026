@@ -16,7 +16,7 @@ let transporter = nodemailer.createTransport({
 
 export const sendMail = async ({ email, subject, html }) => {
   console.log(SMTP_EMAIL, SMTP_PASS)
-  // Parameter email receives value ram@gmail.com
+  // Parameter email receives value chokpapemagmail.com
   const result = await transporter.sendMail({
     from: "pema <chokpapema@gmail.com>",
     to:email,
