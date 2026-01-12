@@ -1,4 +1,4 @@
-import { Products } from "../Schema/product.schema.js";
+import { Products } from "../schema/product.schema.js";
 
 
 export const createProductController = async (req, res) => {

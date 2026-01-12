@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { SECRET_KEY } from "../Config/env.js"
+import { SECRET_KEY } from "../config/env.js"
 
 export const generateToken = async ({payload, expiryTime}) => {
 

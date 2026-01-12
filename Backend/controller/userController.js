@@ -1,4 +1,5 @@
-import { User } from "../schema/user.schema.js";
+
+import { User } from "../schema/user.Schema.js";
 import { hashPassword, verifyPassword } from "../utils/bcrypt.js";
 import { generateToken, verifyToken } from "../utils/jwt.js";
 import { sendMail } from "../utils/nodemailer.js";

@@ -1,5 +1,5 @@
-import { Order } from "../Schema/order.schema.js";
-import { Products } from "../Schema/product.schema.js";
+import { Order } from "../schema/order.schema.js";
+import { Products } from "../schema/product.schema.js";
 
 
 
