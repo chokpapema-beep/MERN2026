@@ -1,9 +1,9 @@
 import React from 'react'
 
-const About = () => {
+const About = props => {
   return (
     <div>
-      hello from About components
+      {props.price} is the price of {props.productName}{""}
     </div>
   )
 }
