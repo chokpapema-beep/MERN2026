@@ -10,6 +10,10 @@ const Navbar = () => {
         <NavLink to={"/about"}>About us</NavLink>
         <NavLink to={"/courses"}>Courses</NavLink>
         <NavLink to={"/store"}>Store</NavLink>
+        <NavLink to={"/useState"}>UseState</NavLink>
+        <NavLink to={"/image"}>Image State</NavLink>
+        <NavLink to={"/password"}>Password State</NavLink>
+        <NavLink to={"/useeffect"}>Use Effect</NavLink>
       </div>
     </div>
   )
